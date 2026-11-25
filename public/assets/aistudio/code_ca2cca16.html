@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-container":"#00452e","primary-fixed-dim":"#4cd7f6","surface-container-highest":"#31353f","tertiary":"#4edea3","outline-variant":"#3d494c","on-error":"#690005","secondary-fixed":"#e1e0ff","on-primary-fixed":"#001f26","surface-container":"#1c1f29","outline":"#869397","surface-bright":"#353943","on-tertiary-fixed":"#002113","error":"#ffb4ab","on-tertiary":"#003824","surface-container-lowest":"#0a0e17","on-secondary":"#1000a9","on-secondary-container":"#b0b2ff","on-background":"#dfe2ef","tertiary-container":"#1bbd85","inverse-primary":"#00687a","secondary":"#c0c1ff","secondary-container":"#3131c0","primary-container":"#06b6d4","secondary-fixed-dim":"#c0c1ff","error-container":"#93000a","tertiary-fixed-dim":"#4edea3","on-primary-container":"#00424f","inverse-surface":"#dfe2ef","surface-container-high":"#262a34","primary":"#4cd7f6","on-surface-variant":"#bcc9cd","on-primary-fixed-variant":"#004e5c","surface-variant":"#31353f","surface":"#0f131c","on-secondary-fixed":"#07006c","surface-container-low":"#181b25","primary-fixed":"#acedff","on-tertiary-fixed-variant":"#005236","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#2f2ebe","on-error-container":"#ffdad6","background":"#0f131c","surface-tint":"#4cd7f6","surface-dim":"#0f131c","on-primary":"#003640","on-surface":"#dfe2ef","inverse-on-surface":"#2c303a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"1rem",gutter:"1rem","space-xl":"2rem","margin-desktop":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-2xl":"3rem","space-md":"1rem"},fontFamily:{"headline-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"code-md":["JetBrains Mono"],"body-md":["Inter"],"label-caps":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"display-lg-mobile":["Inter"],"code-lg":["JetBrains Mono"],"display-lg":["Inter"]},fontSize:{"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"code-sm":["11px",{lineHeight:"16px",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-md":["12px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-caps":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"code-lg":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="PulseTCP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAYtlRlRxM7k062fDIUaw1TRXgdjg_QX6sxCrL62n6MqH3xJd12sviIvfXH7BFQa3DZ9-PeqLfiOxghNbnEa6-pTHFtmj4_JmYZOX1DAqviRZlVZhI8bj1D-KS8itIUIRk_dzbaYrfIf3k0-EBD-27xBFhFMV5SkDIqbjBPBlDPTQUPsVMVH6WTYIE2x0hjO2_LO_SsRvIWs-rrfyF0--trK36JNRqBxu64_y4oIuNt4w"/><span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">PulseTCP</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase">v2.4 Core</span></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><a aria-current="page" class="px-space-sm py-1.5 rounded-DEFAULT transition-colors bg-surface-container-high text-primary font-semibold" data-path="architecture-&amp;-bento" href="#">Architecture &amp; Bento</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="multi-client-tcp-chat" href="#">Multi-Client TCP Chat</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="packet-telemetry" href="#">Packet Telemetry</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="documentation" href="#">Documentation</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="benchmarks" href="#">Benchmarks</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-DEFAULT bg-surface-container text-tertiary font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span>Socket Server: 0.0.0.0:8080</span></div><a class="hidden lg:flex items-center gap-space-xs px-space-sm py-1.5 rounded-DEFAULT bg-surface-container-high hover:bg-surface-bright text-on-surface font-code-sm text-code-sm transition-colors" href="#"><span class="text-primary">★</span><span>4.8k</span></a><button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-md text-body-sm font-semibold transition-all shadow-[0_0_16px_-2px_rgba(6,182,212,0.3)]">Deploy Server</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO BANNER SECTION -->
+<section class="relative w-full px-gutter-desktop pt-space-xl pb-space-2xl overflow-hidden bg-surface-container-lowest">
+<!-- Ambient Radial Glow Backdrops -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-primary/10 via-secondary-container/10 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="absolute top-1/3 -right-24 w-96 h-96 bg-primary-container/10 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col items-center text-center">
+<!-- Spec Pill Badge -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-high shadow-inner">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">⚡ RFC 793 Conforming • Non-blocking Socket I/O • Event-Loop Multiplexing</span>
+</div>
+<!-- Main Headline with Typographic Depth -->
+<h1 class="mt-space-lg font-display-lg text-display-lg text-on-surface tracking-tight max-w-5xl">
+        Next-Gen Multi-Client <span class="text-primary">TCP Engine</span> &amp; Product Telemetry
+      </h1>
+<!-- Supporting Statement -->
+<p class="mt-space-md max-w-3xl font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Engineered for high-concurrency client-server socket messaging with microsecond dispatch, zero-copy packet buffering, and real-time product session telemetry in one modular platform.
+      </p>
+<!-- Action Commands Bar -->
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md w-full max-w-3xl">
+<!-- Shell Command Pill with Copy Trigger -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-2.5 rounded-lg shadow-lg group">
+<span class="font-code-sm text-code-sm text-primary select-none">$</span>
+<code class="font-code-md text-code-md text-on-surface" id="installCommand">curl -sSL https://pulsetcp.sh | bash</code>
+<button class="ml-2 px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface text-code-sm transition-all flex items-center gap-1 active:scale-95" id="copyBtn" title="Copy to clipboard">
+<span class="material-symbols-outlined text-[16px] text-primary">content_copy</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant" id="copyFeedback">COPY</span>
+</button>
+</div>
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-bright text-primary font-headline-md text-body-md transition-all flex items-center gap-space-xs shadow-md" href="#console-preview">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Launch Live Console</span>
+</a>
+</div>
+<!-- Real-Time Metrics Strip -->
+<div class="mt-space-xl grid grid-cols-2 md:grid-cols-4 gap-space-md w-full max-w-4xl">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center text-center shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Stream Throughput</span>
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary tabular-nums mt-0.5">142,800</span>
+<span class="font-code-sm text-code-sm text-outline">Packets / sec</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center text-center shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Kernel p99 Transit</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary tabular-nums mt-0.5">0.42ms</span>
+<span class="font-code-sm text-code-sm text-outline">Zero-copy Ring Buffer</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center text-center shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Network Reliability</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tabular-nums mt-0.5">99.999%</span>
+<span class="font-code-sm text-code-sm text-outline">Zero Packet Loss SLA</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col items-center text-center shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Multiplexed FDs</span>
+<span class="font-headline-lg text-headline-lg font-bold text-secondary tabular-nums mt-0.5">16,384</span>
+<span class="font-code-sm text-code-sm text-outline">Per Event Loop Thread</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BENTO GRID SYSTEM SHOWCASE -->
+<section class="w-full px-gutter-desktop py-space-2xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Title & Taxonomy -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase">Core Systems &amp; Observability Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Modular TCP Event Loop Architecture</h2>
+</div>
+<p class="font-code-md text-code-md text-on-surface-variant max-w-md">
+          Granular socket multiplexing with asynchronous non-blocking handlers, zero-copy serialization, and peer-to-peer whisper pipelines.
+        </p>
+</div>
+<!-- Bento Matrix Grid (12 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- BENTO CARD 1: Large (8 Cols) - Real-Time Socket Topology -->
+<div class="md:col-span-8 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl relative overflow-hidden group">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps uppercase">Multiplexing Core</span>
+<span class="font-code-md text-code-md text-on-surface font-semibold">Real-Time Socket Mesh Topology</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-tertiary font-mono">EPOLL_CTL_ADD / KQUEUE ACTIVE</span>
+</div>
+</div>
+<!-- Interactive-Style Topology Diagram Graphic -->
+<div class="w-full py-space-md my-space-xs rounded-lg bg-surface-container-lowest px-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>BIND HOST: 0.0.0.0:8080 (INADDR_ANY)</span>
+<span class="text-primary">CONCURRENT PEERS: 4 Sockets Attached</span>
+</div>
+<!-- Central Hub to Clients Graph -->
+<div class="grid grid-cols-1 sm:grid-cols-5 gap-space-sm items-center">
+<!-- Server Node -->
+<div class="sm:col-span-2 p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase">Daemon Hub</span>
+<span class="px-1.5 py-0.5 text-code-sm rounded bg-surface-container-high text-tertiary">LISTEN</span>
+</div>
+<span class="font-code-md text-code-md text-on-surface font-bold">PulseTCP Server</span>
+<span class="font-code-sm text-code-sm text-outline font-mono">0.0.0.0:8080 (non-block)</span>
+<div class="mt-2 pt-2 flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant">
+<span>Rx: 1.84 GB/s</span>
+<span class="text-primary font-bold">Tx: 3.12 GB/s</span>
+</div>
+</div>
+<!-- Dispatch Bus SVG Vector -->
+<div class="sm:col-span-1 hidden sm:flex items-center justify-center">
+<svg class="w-full h-24 text-primary" fill="none" viewbox="0 0 100 80">
+<path d="M 5 40 H 45 C 55 40 55 15 65 15 H 95" opacity="0.6" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path d="M 5 40 H 45 C 55 40 55 35 65 35 H 95" opacity="0.8" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M 5 40 H 45 C 55 40 55 55 65 55 H 95" opacity="0.9" stroke="currentColor" stroke-dasharray="4 2" stroke-width="1.5"></path>
+<path d="M 5 40 H 45 C 55 40 55 75 65 75 H 95" opacity="0.5" stroke="currentColor" stroke-width="1.5"></path>
+<circle cx="5" cy="40" fill="#4edea3" r="3"></circle>
+<circle cx="95" cy="15" fill="#4cd7f6" r="2.5"></circle>
+<circle cx="95" cy="35" fill="#4cd7f6" r="2.5"></circle>
+<circle cx="95" cy="55" fill="#4cd7f6" r="2.5"></circle>
+<circle cx="95" cy="75" fill="#4cd7f6" r="2.5"></circle>
+</svg>
+</div>
+<!-- Client Descriptors Column -->
+<div class="sm:col-span-2 flex flex-col gap-1.5">
+<div class="p-space-xs px-space-sm rounded bg-surface-container flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface">fd: 12 &lt;@alice_core&gt;</span>
+<span class="text-tertiary">ESTABLISHED (0.21ms)</span>
+</div>
+<div class="p-space-xs px-space-sm rounded bg-surface-container flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface">fd: 15 &lt;@bob_worker&gt;</span>
+<span class="text-tertiary">ESTABLISHED (0.34ms)</span>
+</div>
+<div class="p-space-xs px-space-sm rounded bg-surface-container flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface">fd: 18 &lt;@telemetry_probe&gt;</span>
+<span class="text-primary">STREAMING (0.19ms)</span>
+</div>
+<div class="p-space-xs px-space-sm rounded bg-surface-container flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface">fd: 21 &lt;@relay_us_east&gt;</span>
+<span class="text-secondary">BURST_TX (0.42ms)</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Sparkline for Live Throughput -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase whitespace-nowrap">I/O Bandwidth (60s)</span>
+<svg class="w-full h-8 text-primary overflow-visible" preserveaspectratio="none" viewbox="0 0 300 32">
+<path d="M0,28 L30,24 L60,26 L90,14 L120,18 L150,8 L180,12 L210,5 L240,16 L270,4 L300,7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,28 L30,24 L60,26 L90,14 L120,18 L150,8 L180,12 L210,5 L240,16 L270,4 L300,7 L300,32 L0,32 Z" fill="url(#cyanGrad)" opacity="0.15"></path>
+<defs>
+<lineargradient id="cyanGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<span>Buffer Mode: Non-blocking Edge-Triggered</span>
+<span class="text-on-surface font-mono">Kernel Syscall Cost: ~21ns / dispatch</span>
+</div>
+</div>
+<!-- BENTO CARD 2: Medium (4 Cols) - Authentication & Handshake -->
+<div class="md:col-span-4 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps uppercase">Security &amp; Auth</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-code-sm text-code-sm">&lt;12µs Verify</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Client Handshake Layer</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Deterministic identity verification within initial 3-way synchronization packet window.</p>
+<!-- Handshake Flow Diagram -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-lowest font-code-sm text-code-sm flex flex-col gap-2">
+<div class="flex items-center gap-2 text-outline">
+<span class="text-tertiary">01</span>
+<span>TCP [SYN] → Client initiates socket</span>
+</div>
+<div class="flex items-center gap-2 text-outline">
+<span class="text-tertiary">02</span>
+<span>TCP [SYN-ACK] ← Daemon registers FD</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-on-surface">
+<div class="text-primary font-bold mb-1">Payload Struct Handshake:</div>
+<div class="text-outline">{</div>
+<div class="pl-3 text-secondary">nickname: <span class="text-tertiary">"@alice_core"</span>,</div>
+<div class="pl-3 text-secondary">token_hash: <span class="text-outline">"0x9f1a...c8b"</span>,</div>
+<div class="pl-3 text-secondary">ver: <span class="text-on-surface">"2.4.0"</span></div>
+<div class="text-outline">}</div>
+</div>
+<div class="flex items-center justify-between text-tertiary font-bold pt-1">
+<span>✓ [AUTH_GRANTED]</span>
+<span class="text-on-surface-variant text-code-sm font-normal">Collision Resolv: None</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-code-sm text-outline">
+<span>RFC 793 / TLS 1.3 Wrapping</span>
+<span class="text-primary">Encrypted Session</span>
+</div>
+</div>
+<!-- BENTO CARD 3: Medium (4 Cols) - Zero-Copy Packet Serialization -->
+<div class="md:col-span-4 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-caps text-label-caps uppercase">Binary Wire Format</span>
+<span class="text-tertiary font-code-sm text-code-sm">48B Memory Overhead</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Zero-Copy Packet Frame</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Streamlined binary packet structuring designed directly for user-space ring buffer reads.</p>
+<!-- Packet Byte Breakdown Visual -->
+<div class="mt-space-md flex flex-col gap-2">
+<div class="grid grid-cols-10 gap-1 text-center font-code-sm text-code-sm">
+<div class="col-span-3 p-1.5 rounded bg-primary/20 text-primary font-bold">
+<div class="text-[10px] text-primary-fixed-dim uppercase">Len [4B]</div>
+<span>0x00000084</span>
+</div>
+<div class="col-span-3 p-1.5 rounded bg-secondary-container/30 text-secondary font-bold">
+<div class="text-[10px] text-secondary-fixed uppercase">Opcode [2B]</div>
+<span>0x05B1</span>
+</div>
+<div class="col-span-4 p-1.5 rounded bg-surface-container text-on-surface font-bold">
+<div class="text-[10px] text-outline uppercase">SeqNum [4B]</div>
+<span>#104,912</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest font-code-sm text-code-sm text-on-surface flex flex-col gap-1">
+<div class="flex justify-between text-outline text-[11px]">
+<span>PAYLOAD [Encrypted Envelope - Chacha20Poly1305]</span>
+<span class="text-tertiary">Direct DMA Memory</span>
+</div>
+<div class="font-mono text-xs text-primary-fixed-dim tracking-wider break-all">
+                  50 75 6c 73 65 54 43 50 3a 20 6d 73 67 5f 70 61 79 6c 6f 61 64 5f 63 68 75 6e 6b
+                </div>
+<div class="mt-1 pt-1 flex justify-between items-center text-outline">
+<span>CRC32 CHECKSUM [4B]</span>
+<span class="font-mono text-tertiary">0x8B34F1A0</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-code-sm text-on-surface-variant">
+<span>Ring Buffer Allocation: 64KB</span>
+<span class="text-tertiary">0 Mem-Copies</span>
+</div>
+</div>
+<!-- BENTO CARD 4: Large (8 Cols) - Public Broadcast vs Private Whispers -->
+<div class="md:col-span-8 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase">Dispatch Mechanics</span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">Dual Dispatch Engine</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Public Fan-Out Broadcast vs. Private Socket Whispers</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Choose between deterministic broadcast distribution to N-1 active descriptors or direct peer socket routing without server-side payload logging.</p>
+<!-- Dual Interactive Comparison Preview -->
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Broadcast Column -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-md text-code-md text-primary font-bold">/broadcast &lt;payload&gt;</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface">Fan-out: N-1</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Sends packets across all established non-blocking socket fds with automatic zero-copy scatter-gather I/O.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Cluster Dispatch:</span>
+<span class="text-tertiary font-bold font-mono">0.82ms Latency</span>
+</div>
+</div>
+<!-- Private Whisper Column -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-code-md text-code-md text-secondary font-bold">/msg &lt;nick&gt; &lt;msg&gt;</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-secondary">Point-to-Point</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Direct lookup in hash table indexed by nickname. Payload forwarded immediately into receiver's write buffer.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Peer Pipe Latency:</span>
+<span class="text-primary font-bold font-mono">0.31ms Latency</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Visual Bench Comparison -->
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-sm font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Memory Zero-Trace on Whispers: Enabled</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>No Disk Write Queue Contention</span>
+</div>
+</div>
+</div>
+<!-- BENTO CARD 5: Medium (6 Cols) - Built-in Socket Telemetry & Metrics -->
+<div class="md:col-span-6 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-caps text-label-caps uppercase">Telemetry Diagnostics</span>
+<span class="font-code-sm text-code-sm text-tertiary">p99 Stream Nominal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Integrated Socket Metrics Gauge</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Continuous microsecond telemetry probes measuring kernel queue pressure and backoff events.</p>
+<!-- Metrics Gauges Grid -->
+<div class="mt-space-md grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-outline uppercase">Active Concurrent Peers</span>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1 tabular-nums">8,412</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-outline uppercase">Peak Dispatches/Sec</span>
+<div class="font-headline-lg text-headline-lg font-bold text-tertiary mt-1 tabular-nums">2.41M</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-outline uppercase">Buffer Saturation</span>
+<div class="font-headline-lg text-headline-lg font-bold text-primary mt-1 tabular-nums">3.1%</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 12%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-outline uppercase">Dropped Frames</span>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1 tabular-nums">0.00%</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-code-sm text-outline">
+<span>Prometheus &amp; OpenTelemetry Export Ready</span>
+<span class="text-tertiary font-mono">/metrics [200 OK]</span>
+</div>
+</div>
+<!-- BENTO CARD 6: Medium (6 Cols) - CLI & SDK Integration -->
+<div class="md:col-span-6 rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-xl" id="console-preview">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps uppercase">Polyglot Client SDKs</span>
+<div class="flex items-center gap-1">
+<button class="sdk-tab px-2 py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm font-semibold transition-all" data-lang="go">Go</button>
+<button class="sdk-tab px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-all" data-lang="rust">Rust</button>
+<button class="sdk-tab px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-all" data-lang="py">Python</button>
+<button class="sdk-tab px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-all" data-lang="c">C99</button>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Embed Socket Client in 4 Lines</h3>
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Initialize non-blocking socket listeners and stream pipelines with full connection lifecycle management.</p>
+<!-- Interactive Code Snippets -->
+<div class="mt-space-md rounded-lg bg-surface-container-lowest p-space-md font-code-sm text-code-sm overflow-x-auto">
+<!-- Go Code (Default) -->
+<pre class="code-block block text-on-surface leading-5 font-mono" id="code-go"><span class="text-primary">client</span> := pulsetcp.NewClient(<span class="text-tertiary">"0.0.0.0:8080"</span>, <span class="text-tertiary">"@alice_core"</span>)
+<span class="text-primary">client</span>.OnMessage(<span class="text-secondary">func</span>(src, msg <span class="text-secondary">string</span>) {
+    fmt.Printf(<span class="text-tertiary">"[%s]: %s\n"</span>, src, msg)
+})
+<span class="text-primary">client</span>.Broadcast(<span class="text-tertiary">"Hello cluster"</span>)
+<span class="text-primary">client</span>.Whisper(<span class="text-tertiary">"@bob_worker"</span>, <span class="text-tertiary">"Task #42 complete"</span>)</pre>
+<!-- Rust Code -->
+<pre class="code-block hidden text-on-surface leading-5 font-mono" id="code-rust"><span class="text-secondary">let mut</span> client = PulseClient::connect(<span class="text-tertiary">"0.0.0.0:8080"</span>, <span class="text-tertiary">"@alice_core"</span>).<span class="text-primary">await?</span>;
+client.listen(|sender, msg| {
+    println!(<span class="text-tertiary">"[{sender}] {msg}"</span>);
+});
+client.broadcast(<span class="text-tertiary">"Hello cluster"</span>).<span class="text-primary">await?</span>;
+client.whisper(<span class="text-tertiary">"@bob_worker"</span>, <span class="text-tertiary">"Task #42 complete"</span>).<span class="text-primary">await?</span>;</pre>
+<!-- Python Code -->
+<pre class="code-block hidden text-on-surface leading-5 font-mono" id="code-py"><span class="text-secondary">from</span> pulsetcp <span class="text-secondary">import</span> PulseClient
+client = PulseClient(<span class="text-tertiary">"0.0.0.0:8080"</span>, nick=<span class="text-tertiary">"@alice_core"</span>)
+client.on_message(<span class="text-secondary">lambda</span> src, msg: print(f<span class="text-tertiary">"[{src}]: {msg}"</span>))
+client.broadcast(<span class="text-tertiary">"Hello cluster"</span>)
+client.whisper(<span class="text-tertiary">"@bob_worker"</span>, <span class="text-tertiary">"Task #42 complete"</span>)</pre>
+<!-- C Code -->
+<pre class="code-block hidden text-on-surface leading-5 font-mono" id="code-c">pulse_t *c = pulse_init(<span class="text-tertiary">"0.0.0.0"</span>, 8080, <span class="text-tertiary">"@alice_core"</span>);
+pulse_on_msg(c, handle_incoming_frame);
+pulse_broadcast(c, <span class="text-tertiary">"Hello cluster"</span>, 13);
+pulse_whisper(c, <span class="text-tertiary">"@bob_worker"</span>, <span class="text-tertiary">"Task #42 complete"</span>, 16);</pre>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-code-sm text-outline">
+<span>Thread-Safe Async Loop</span>
+<span class="text-primary">Zero Runtime Allocations</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BENCHMARK & PROTOCOL ARCHITECTURE SPECS -->
+<section class="w-full px-gutter-desktop py-space-2xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Comparative Telemetry</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">PulseTCP vs. Traditional Transports</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Benchmarked on bare-metal Linux kernels (6.8.0), dual AMD EPYC 9654, 100GbE link, 50,000 concurrent continuous socket connections.
+        </p>
+</div>
+<!-- Comparative Metrics Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low p-space-md shadow-xl">
+<table class="w-full text-left font-code-sm text-code-sm">
+<thead>
+<tr class="text-outline uppercase font-label-caps text-label-caps border-b-0 pb-space-sm">
+<th class="py-space-sm px-space-md">Protocol / Platform</th>
+<th class="py-space-sm px-space-md">Throughput</th>
+<th class="py-space-sm px-space-md">p99 Latency</th>
+<th class="py-space-sm px-space-md">Memory / 10k Conns</th>
+<th class="py-space-sm px-space-md">Header Overhead</th>
+<th class="py-space-sm px-space-md">Packet Framing</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- PulseTCP Row (Highlighted) -->
+<tr class="bg-surface-container rounded-lg font-bold">
+<td class="py-space-md px-space-md flex items-center gap-space-xs text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>PulseTCP v2.4 (Native TCP)</span>
+</td>
+<td class="py-space-md px-space-md text-tertiary font-mono">1,420,000 msg/s</td>
+<td class="py-space-md px-space-md text-tertiary font-mono">0.42 ms</td>
+<td class="py-space-md px-space-md text-on-surface font-mono">18.4 MB</td>
+<td class="py-space-md px-space-md text-primary font-mono">10 Bytes</td>
+<td class="py-space-md px-space-md">Zero-copy Binary Frame</td>
+</tr>
+<!-- WebSocket Row -->
+<tr class="text-on-surface-variant hover:bg-surface-container/40 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-on-surface">Standard WebSocket (RFC 6455)</td>
+<td class="py-space-md px-space-md font-mono">312,000 msg/s</td>
+<td class="py-space-md px-space-md font-mono">2.84 ms</td>
+<td class="py-space-md px-space-md font-mono">142.0 MB</td>
+<td class="py-space-md px-space-md font-mono">14 - 28 Bytes</td>
+<td class="py-space-md px-space-md">Masked UTF-8 / Binary</td>
+</tr>
+<!-- HTTP/2 SSE Row -->
+<tr class="text-on-surface-variant hover:bg-surface-container/40 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-on-surface">HTTP/2 Server-Sent Events (SSE)</td>
+<td class="py-space-md px-space-md font-mono">185,000 msg/s</td>
+<td class="py-space-md px-space-md font-mono">4.10 ms</td>
+<td class="py-space-md px-space-md font-mono">210.5 MB</td>
+<td class="py-space-md px-space-md font-mono">~45 Bytes (HPACK)</td>
+<td class="py-space-md px-space-md">Chunked Stream / Text</td>
+</tr>
+<!-- REST Polling Row -->
+<tr class="text-on-surface-variant hover:bg-surface-container/40 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-on-surface">REST Long-Polling (HTTP/1.1)</td>
+<td class="py-space-md px-space-md font-mono">42,000 req/s</td>
+<td class="py-space-md px-space-md font-mono">24.50 ms</td>
+<td class="py-space-md px-space-md font-mono">820.0 MB</td>
+<td class="py-space-md px-space-md font-mono">~350 Bytes</td>
+<td class="py-space-md px-space-md">Full HTTP Envelope</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Protocol Feature Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-xs shadow-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Kernel DMA Ring Buffering</h4>
+<p class="font-body-sm text-body-sm text-outline">Bypasses intermediary user-kernel copies through direct memory assignment, eliminating GC pressure and CPU register thrashing.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-xs shadow-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary mb-2">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Deterministic Edge-Trigger</h4>
+<p class="font-body-sm text-body-sm text-outline">State updates trigger only upon socket read readiness transitions, maximizing Epoll/Kqueue batch efficiency without redundant wakeups.</p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-xs shadow-lg">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined">encrypted</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">ChaCha20-Poly1305 Cipher</h4>
+<p class="font-body-sm text-body-sm text-outline">Hardware-accelerated AEAD cryptographic envelopes ensure encrypted whisper routing with negligible overhead on ARM64 and x86_64.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION BANNER -->
+<section class="w-full px-gutter-desktop py-space-2xl bg-surface">
+<div class="max-w-5xl mx-auto rounded-xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container p-space-xl text-center flex flex-col items-center gap-space-md shadow-2xl relative overflow-hidden">
+<!-- Glow Accent -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-primary/20 blur-3xl pointer-events-none rounded-full"></div>
+<span class="px-space-sm py-1 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase">Ready For Production</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface max-w-2xl font-bold">
+        Deploy High-Throughput Multi-Client TCP Telemetry Today
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Ship ultra-low-latency real-time communications, distributed telemetry collectors, and whisper-safe socket messaging directly into your cloud nodes.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md mt-space-sm">
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-md text-body-md font-semibold transition-all shadow-[0_0_20px_-3px_rgba(6,182,212,0.4)]">
+          Deploy PulseTCP Cluster
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-headline-md text-body-md transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Explore Architecture Specs</span>
+</button>
+</div>
+<div class="flex items-center gap-space-lg font-code-sm text-code-sm text-outline mt-space-sm">
+<span>Docker / Kubernetes / Systemd</span>
+<span>•</span>
+<span>Single Binary (14MB)</span>
+<span>•</span>
+<span>Free &amp; Open Core</span>
+</div>
+</div>
+</section>
+<!-- CLIENT-SIDE INTERACTIONS -->
+<script>
+    // Copy Command Interaction
+    const copyBtn = document.getElementById('copyBtn');
+    const copyFeedback = document.getElementById('copyFeedback');
+    const installCmd = document.getElementById('installCommand');
+
+    if (copyBtn && installCmd) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(installCmd.innerText).then(() => {
+          copyFeedback.innerText = 'COPIED!';
+          copyFeedback.classList.add('text-tertiary');
+          setTimeout(() => {
+            copyFeedback.innerText = 'COPY';
+            copyFeedback.classList.remove('text-tertiary');
+          }, 2000);
+        });
+      });
+    }
+
+    // Code Snippet Language Switcher
+    const tabs = document.querySelectorAll('.sdk-tab');
+    const blocks = document.querySelectorAll('.code-block');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const lang = tab.getAttribute('data-lang');
+        
+        // Reset tab styles
+        tabs.forEach(t => {
+          t.className = 'sdk-tab px-2 py-0.5 rounded bg-surface-container hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm transition-all';
+        });
+        
+        // Active tab style
+        tab.className = 'sdk-tab px-2 py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm font-semibold transition-all';
+
+        // Toggle code visibility
+        blocks.forEach(block => {
+          if (block.id === `code-${lang}`) {
+            block.classList.remove('hidden');
+            block.classList.add('block');
+          } else {
+            block.classList.remove('block');
+            block.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-auto"><div class="w-full px-gutter-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-code-sm text-code-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span>SPEC: RFC 793 COMPLIANT</span><span>•</span><span>TLS 1.3 WRAPPER</span><span>•</span><span class="text-tertiary">p99 LATENCY &lt; 0.42ms</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="text-on-surface">SYSTEM NOMINAL</span></div><span class="font-body-sm text-body-sm text-outline">© 2025 PulseTCP Telemetry Engine</span></div></div></footer></body></html>

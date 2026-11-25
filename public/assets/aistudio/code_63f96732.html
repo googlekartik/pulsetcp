@@ -1,0 +1,732 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-container":"#00452e","primary-fixed-dim":"#4cd7f6","surface-container-highest":"#31353f","tertiary":"#4edea3","outline-variant":"#3d494c","on-error":"#690005","secondary-fixed":"#e1e0ff","on-primary-fixed":"#001f26","surface-container":"#1c1f29","outline":"#869397","surface-bright":"#353943","on-tertiary-fixed":"#002113","error":"#ffb4ab","on-tertiary":"#003824","surface-container-lowest":"#0a0e17","on-secondary":"#1000a9","on-secondary-container":"#b0b2ff","on-background":"#dfe2ef","tertiary-container":"#1bbd85","inverse-primary":"#00687a","secondary":"#c0c1ff","secondary-container":"#3131c0","primary-container":"#06b6d4","secondary-fixed-dim":"#c0c1ff","error-container":"#93000a","tertiary-fixed-dim":"#4edea3","on-primary-container":"#00424f","inverse-surface":"#dfe2ef","surface-container-high":"#262a34","primary":"#4cd7f6","on-surface-variant":"#bcc9cd","on-primary-fixed-variant":"#004e5c","surface-variant":"#31353f","surface":"#0f131c","on-secondary-fixed":"#07006c","surface-container-low":"#181b25","primary-fixed":"#acedff","on-tertiary-fixed-variant":"#005236","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#2f2ebe","on-error-container":"#ffdad6","background":"#0f131c","surface-tint":"#4cd7f6","surface-dim":"#0f131c","on-primary":"#003640","on-surface":"#dfe2ef","inverse-on-surface":"#2c303a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"1rem",gutter:"1rem","space-xl":"2rem","margin-desktop":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-2xl":"3rem","space-md":"1rem"},fontFamily:{"headline-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"code-md":["JetBrains Mono"],"body-md":["Inter"],"label-caps":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"display-lg-mobile":["Inter"],"code-lg":["JetBrains Mono"],"display-lg":["Inter"]},fontSize:{"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"code-sm":["11px",{lineHeight:"16px",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"code-md":["12px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-caps":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"code-lg":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="PulseTCP Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAYtlRlRxM7k062fDIUaw1TRXgdjg_QX6sxCrL62n6MqH3xJd12sviIvfXH7BFQa3DZ9-PeqLfiOxghNbnEa6-pTHFtmj4_JmYZOX1DAqviRZlVZhI8bj1D-KS8itIUIRk_dzbaYrfIf3k0-EBD-27xBFhFMV5SkDIqbjBPBlDPTQUPsVMVH6WTYIE2x0hjO2_LO_SsRvIWs-rrfyF0--trK36JNRqBxu64_y4oIuNt4w"><span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">PulseTCP</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-label-caps text-label-caps uppercase">v2.4 Core</span></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="architecture-&amp;-bento" href="#">Architecture &amp; Bento</a><a aria-current="page" class="px-space-sm py-1.5 rounded-DEFAULT transition-colors bg-surface-container-high text-primary font-semibold" data-path="multi-client-tcp-chat" href="#">Multi-Client TCP Chat</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="packet-telemetry" href="#">Packet Telemetry</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="documentation" href="#">Documentation</a><a class="px-space-sm py-1.5 rounded-DEFAULT font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="benchmarks" href="#">Benchmarks</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-DEFAULT bg-surface-container text-tertiary font-code-sm text-code-sm"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span>Socket Server: 0.0.0.0:8080</span></div><a class="hidden lg:flex items-center gap-space-xs px-space-sm py-1.5 rounded-DEFAULT bg-surface-container-high hover:bg-surface-bright text-on-surface font-code-sm text-code-sm transition-colors" href="#"><span class="text-primary">★</span><span>4.8k</span></a><button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-md text-body-sm font-semibold transition-all shadow-[0_0_16px_-2px_rgba(6,182,212,0.3)]">Deploy Server</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Operational Control Bar -->
+<section class="w-full bg-surface-container-lowest px-gutter-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-sm"><div class="w-full flex flex-wrap items-center justify-between gap-2 pb-2 mb-2 bg-surface-container-lowest text-code-sm font-code-sm"><div class="flex flex-wrap items-center gap-2"><span class="flex items-center gap-1 px-2 py-0.5 rounded bg-primary/20 text-primary font-semibold text-[11px]"><span class="material-symbols-outlined text-[14px]">lan</span>Architecture: TCP Client–Server Model (<code class="text-primary-fixed">AF_INET</code>, <code class="text-primary-fixed">SOCK_STREAM</code>)</span><span class="flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold text-[11px]"><span class="material-symbols-outlined text-[14px]">account_tree</span>Threading Engine: Python <code class="text-tertiary font-mono">threading.Thread(target=handle_client, args=(conn, addr))</code></span><span class="hidden xl:flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/20 text-secondary text-[11px]"><span class="material-symbols-outlined text-[14px]">groups</span>Multi-Client Concurrency: 1 thread per client (fd descriptor mapping)</span></div><div class="flex items-center gap-2"><span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>THREAD POOL ACTIVE: 15 WORKERS</span></div></div>
+<div class="flex flex-wrap items-center gap-space-md min-w-0">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-tertiary font-code-sm text-code-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-code-md text-code-md tracking-tight">tcp://127.0.0.1:8080</span>
+<span class="px-1 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">fd:19</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>TLS 1.3 AES-256-GCM</span>
+<span class="text-outline">•</span>
+<span class="text-primary font-semibold">1.2 ms RTT</span>
+</div>
+</div>
+<!-- Active Identity & Control Actions -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright transition-colors cursor-pointer group" id="identityChip">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-md text-[10px] font-bold">A</div>
+<span class="font-code-sm text-code-sm font-semibold text-primary group-hover:text-primary-fixed-dim" id="currentNickLabel">@dev_alex</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">edit</span>
+</div><button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary border border-outline-variant font-code-sm text-code-sm flex items-center gap-1 transition-colors" onclick="toggleNickModal(true)" title="Change handle with thread-safe lock validation"><span class="material-symbols-outlined text-[14px]">badge</span><span>/nick Change</span></button>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-code-sm text-code-sm transition-colors flex items-center gap-1" id="btnSpawnMock" title="Instantiate Virtual Mock Socket">
+<span class="material-symbols-outlined text-[15px] text-tertiary">add_circle</span>
+<span class="hidden md:inline">Spawn Client</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-code-sm text-code-sm transition-colors flex items-center gap-1" id="btnClearBuffer" title="Flush Console Stream">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">cleaning_services</span>
+<span class="hidden md:inline">Clear</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-code-sm text-code-sm transition-colors flex items-center gap-1" id="btnExportLogs" title="Export PCAP / Session JSON">
+<span class="material-symbols-outlined text-[15px] text-primary">download</span>
+<span class="hidden md:inline">Export</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-code-sm text-code-sm font-semibold transition-all flex items-center gap-1" id="btnReconnect">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Reconnect</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Three-Column Layout -->
+<section class="w-full px-gutter-desktop py-space-md grid grid-cols-1 lg:grid-cols-12 gap-space-md flex-1">
+<!-- LEFT COLUMN: Connected Peers & Directory (Width approx 280px / 3 cols) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md min-w-0">
+<!-- Directory Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-body-md font-bold text-on-surface tracking-tight">Active Sockets</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-label-caps">15 ONLINE</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">hub</span>
+</div>
+<!-- Filter Input -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[16px]">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-7 pr-7 py-1.5 rounded font-code-sm text-code-sm placeholder-outline focus:outline-none focus:bg-surface-container transition-all" id="peerSearchInput" placeholder="Filter fd, handle, ip..." type="text">
+<span class="absolute right-2 top-2 font-label-caps text-[9px] text-outline px-1 rounded bg-surface-container">/</span>
+</div>
+<!-- Rooms / Channels Section -->
+<div class="pt-space-xs">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block mb-1">Broadcast Channels</span>
+<div class="flex flex-col gap-0.5">
+<button class="channel-btn w-full px-space-sm py-1.5 rounded bg-surface-container-high text-primary flex items-center justify-between text-left transition-colors font-code-sm text-code-sm" data-channel="general">
+<span class="flex items-center gap-space-xs font-semibold">
+<span class="text-primary font-bold">#</span>general
+              </span>
+<span class="px-1 py-0.2 rounded bg-primary/20 text-primary text-[10px] font-bold">PUB</span>
+</button>
+<button class="channel-btn w-full px-space-sm py-1.5 rounded hover:bg-surface-container text-on-surface-variant flex items-center justify-between text-left transition-colors font-code-sm text-code-sm" data-channel="infra-telemetry">
+<span class="flex items-center gap-space-xs">
+<span class="text-outline">#</span>infra-telemetry
+              </span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</button>
+<button class="channel-btn w-full px-space-sm py-1.5 rounded hover:bg-surface-container text-on-surface-variant flex items-center justify-between text-left transition-colors font-code-sm text-code-sm" data-channel="system-alerts">
+<span class="flex items-center gap-space-xs">
+<span class="text-outline">#</span>system-alerts
+              </span>
+<span class="px-1 py-0.2 rounded bg-error-container text-error text-[10px] font-bold">CRIT</span>
+</button>
+</div>
+</div>
+<!-- Direct Sockets / Whispers -->
+<div class="pt-space-xs">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block mb-1">Direct Sockets (Whispers)</span>
+<div class="flex flex-col gap-0.5">
+<div class="p-space-xs rounded bg-secondary-container/20 flex items-center justify-between cursor-pointer hover:bg-secondary-container/30 transition-all" onclick="selectPeerWhisper('dana_sec')">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">vpn_key</span>
+<div class="truncate">
+<span class="font-code-sm text-code-sm font-semibold text-secondary block truncate">@dana_sec</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">Active cipher pipe</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+</div>
+<div class="p-space-xs rounded hover:bg-surface-container flex items-center justify-between cursor-pointer transition-all" onclick="selectPeerWhisper('bob_infra')">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">lock_open</span>
+<div class="truncate">
+<span class="font-code-sm text-code-sm text-on-surface block truncate">@bob_infra</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">2 unread frames</span>
+</div>
+</div>
+<span class="px-1 py-0.2 rounded bg-primary text-on-primary font-bold text-[10px]">2</span>
+</div>
+</div>
+</div>
+<!-- Peer Directory List -->
+<div class="pt-space-xs flex flex-col flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Connected Clients</span>
+<span class="font-code-sm text-[10px] text-tertiary">TCP_ESTABLISHED</span>
+</div>
+<div class="flex flex-col gap-1 overflow-y-auto max-h-[300px] pr-1" id="peerListContainer"><div class="peer-item p-1.5 rounded bg-surface-container/60 hover:bg-surface-container-high transition-all cursor-pointer flex items-center justify-between border border-primary/30" onclick="quickWhisper('frank_ops')"><div class="flex items-center gap-2 min-w-0"><div class="relative"><div class="w-6 h-6 rounded bg-primary/20 text-primary flex items-center justify-center font-code-sm text-code-sm font-bold">FO</div><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse absolute -bottom-0.5 -right-0.5"></span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-code-sm text-code-sm font-semibold text-primary truncate">@frank_ops</span><span class="px-1 rounded bg-tertiary/20 text-tertiary font-label-caps text-[8px] font-bold">NEW JOIN</span></div><span class="font-label-caps text-[9px] text-on-surface-variant">ONLINE • fd:25</span></div></div><span class="font-code-sm text-[11px] text-tertiary font-semibold">0.7ms</span></div>
+<!-- Alice Core -->
+<div class="peer-item p-1.5 rounded bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer flex items-center justify-between" onclick="quickWhisper('alice_core')">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative">
+<div class="w-6 h-6 rounded bg-primary/20 text-primary flex items-center justify-center font-code-sm text-code-sm font-bold">AL</div>
+<span class="w-2 h-2 rounded-full bg-tertiary absolute -bottom-0.5 -right-0.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface truncate">@alice_core</span>
+<span class="font-label-caps text-[9px] text-primary">ADMIN • fd:12</span>
+</div>
+</div>
+<span class="font-code-sm text-[11px] text-tertiary">0.8ms</span>
+</div>
+<!-- Bob Infra -->
+<div class="peer-item p-1.5 rounded hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between" onclick="quickWhisper('bob_infra')">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative">
+<div class="w-6 h-6 rounded bg-surface-container-highest text-on-surface flex items-center justify-center font-code-sm text-code-sm font-bold">BI</div>
+<span class="w-2 h-2 rounded-full bg-tertiary absolute -bottom-0.5 -right-0.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm text-on-surface truncate">@bob_infra</span>
+<span class="font-label-caps text-[9px] text-outline">ONLINE • fd:15</span>
+</div>
+</div>
+<span class="font-code-sm text-[11px] text-on-surface-variant">1.4ms</span>
+</div>
+<!-- Charlie k8s -->
+<div class="peer-item p-1.5 rounded hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between" onclick="quickWhisper('charlie_k8s')">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative">
+<div class="w-6 h-6 rounded bg-surface-container-highest text-outline flex items-center justify-center font-code-sm text-code-sm font-bold">CK</div>
+<span class="w-2 h-2 rounded-full bg-outline absolute -bottom-0.5 -right-0.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm text-outline truncate">@charlie_k8s</span>
+<span class="font-label-caps text-[9px] text-outline">IDLE 2m • fd:18</span>
+</div>
+</div>
+<span class="font-code-sm text-[11px] text-outline">2.1ms</span>
+</div>
+<!-- Dana sec -->
+<div class="peer-item p-1.5 rounded hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between" onclick="quickWhisper('dana_sec')">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative">
+<div class="w-6 h-6 rounded bg-secondary/20 text-secondary flex items-center justify-center font-code-sm text-code-sm font-bold">DS</div>
+<span class="w-2 h-2 rounded-full bg-tertiary absolute -bottom-0.5 -right-0.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm text-on-surface truncate">@dana_sec</span>
+<span class="font-label-caps text-[9px] text-secondary">ONLINE • fd:21</span>
+</div>
+</div>
+<span class="font-code-sm text-[11px] text-tertiary">0.9ms</span>
+</div>
+<!-- Elena db -->
+<div class="peer-item p-1.5 rounded hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between" onclick="quickWhisper('elena_db')">
+<div class="flex items-center gap-2 min-w-0">
+<div class="relative">
+<div class="w-6 h-6 rounded bg-tertiary/20 text-tertiary flex items-center justify-center font-code-sm text-code-sm font-bold">ED</div>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse absolute -bottom-0.5 -right-0.5"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-sm text-code-sm text-on-surface truncate">@elena_db</span>
+<span class="font-label-caps text-[9px] text-primary">STREAMING • fd:24</span>
+</div>
+</div>
+<span class="font-code-sm text-[11px] text-primary">1.1ms</span>
+</div>
+</div>
+</div>
+<!-- Infrastructure Topology Mini Tile -->
+<div class="p-space-xs rounded bg-surface-container-lowest mt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">dns</span>
+<div class="flex flex-col">
+<span class="font-code-sm text-[11px] font-bold text-on-surface">Cluster Node us-east</span>
+<span class="font-label-caps text-[9px] text-outline">Epoll Worker 04</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-[9px] font-bold">READY</span>
+</div>
+</div>
+</aside>
+<!-- CENTER COLUMN: Real-Time Stream & Message Console (Flex-1 / 6 cols) -->
+<main class="lg:col-span-6 flex flex-col gap-space-sm min-w-0">
+<!-- Console Header Bar with View Toggles -->
+<div class="bg-surface-container-low rounded-xl px-space-md py-space-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 p-0.5 rounded bg-surface-container-lowest"><button class="px-space-sm py-1 rounded bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold transition-all flex items-center gap-1 shadow-sm" id="tabVisual"><span class="material-symbols-outlined text-[15px]">forum</span><span>Visual Stream</span></button><button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-all flex items-center gap-1" id="tabPacket"><span class="material-symbols-outlined text-[15px]">terminal</span><span>Raw Hex/TCP</span></button><div class="h-4 w-px bg-outline-variant mx-1 hidden sm:block"></div><button class="px-2 py-1 rounded text-outline hover:text-on-surface font-code-sm text-[11px] transition-all flex items-center gap-1" onclick="filterMessageType('all')" id="btnFilterAll"><span class="font-bold">[All]</span></button><button class="px-2 py-1 rounded text-primary hover:bg-surface-container font-code-sm text-[11px] transition-all flex items-center gap-1" onclick="filterMessageType('broadcast')" id="btnFilterPublic"><span class="material-symbols-outlined text-[13px]">campaign</span><span># Public</span></button><button class="px-2 py-1 rounded text-secondary hover:bg-surface-container font-code-sm text-[11px] transition-all flex items-center gap-1" onclick="filterMessageType('whisper')" id="btnFilterPrivate"><span class="material-symbols-outlined text-[13px]">lock</span><span>🔒 Whispers (/msg)</span></button></div>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline">
+<span class="hidden sm:inline">BUFFER:</span>
+<span class="text-tertiary font-bold tabular-nums">48.2 KB/s</span>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse ml-1"></span>
+</div>
+</div>
+<!-- VISUAL FEED CONTAINER -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md overflow-y-auto max-h-[640px] flex flex-col gap-space-sm shadow-inner min-h-[460px]" id="visualFeed">
+<!-- System Handshake Banner -->
+<div class="w-full p-2.5 rounded bg-surface-container-low flex items-start gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">verified_user</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">[TCP_HANDSHAKE_COMPLETED]</span>
+<span class="font-code-sm text-[10px] text-outline">14:21:58.304</span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface mt-0.5">
+              Client <span class="text-primary font-bold">@bob_infra</span> connected via socket <code class="text-tertiary">192.168.1.42:52190</code> (fd:15). SYN/ACK latency: <span class="text-tertiary">0.6ms</span>. Window scale option set to 7.
+            </p>
+</div>
+</div>
+<!-- Public Broadcast from Alice -->
+<div class="flex flex-col gap-1 max-w-[90%]">
+<div class="flex items-center gap-space-xs">
+<div class="w-5 h-5 rounded bg-primary/20 text-primary flex items-center justify-center font-code-sm text-[10px] font-bold">AL</div>
+<span class="font-code-sm text-code-sm font-bold text-primary">@alice_core</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px]">BROADCAST</span>
+<span class="font-code-sm text-[10px] text-outline">14:22:04</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm">
+<p>Pushing configuration <code class="px-1 rounded bg-surface-container-highest text-primary font-code-sm text-code-sm">v2.4.12-hotfix</code> to cluster edge nodes. Packet synchronization and ring buffer active across all nodes.</p>
+</div>
+</div>
+<!-- Encrypted Whisper Message Dana -> User -->
+<div class="flex flex-col gap-1 max-w-[92%] self-start">
+<div class="flex items-center gap-space-xs">
+<div class="w-5 h-5 rounded bg-secondary/30 text-secondary flex items-center justify-center font-code-sm text-[10px] font-bold">DS</div>
+<span class="font-code-sm text-code-sm font-bold text-secondary">@dana_sec</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container/40 text-secondary font-label-caps text-[9px] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">lock</span>
+<span>PRIVATE WHISPER</span>
+</span>
+<span class="font-code-sm text-[10px] text-outline">14:22:19</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container-high text-on-surface shadow-md">
+<p class="font-body-md text-body-md">Rotating socket encryption keys for node 3. Verifying checksum hash block before releasing TCP sync semaphore...</p>
+<div class="mt-2 pt-2 flex items-center justify-between">
+<span class="font-code-sm text-[11px] text-secondary font-mono">NONCE: 0x88FE21C94BA071</span>
+<button class="text-secondary hover:text-on-secondary font-code-sm text-[11px] font-semibold flex items-center gap-0.5 hover:underline" onclick="prefillWhisper('@dana_sec')">
+<span class="material-symbols-outlined text-[13px]">reply</span>
+<span>Reply Private</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Outgoing Message from current User -->
+<div class="flex flex-col gap-1 max-w-[88%] self-end items-end">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-[10px] text-outline">14:22:31</span>
+<span class="px-1 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px]">FD:19 OUT</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">@dev_alex</span>
+<div class="w-5 h-5 rounded bg-primary text-on-primary flex items-center justify-center font-code-sm text-[10px] font-bold">A</div>
+</div>
+<div class="p-space-sm rounded-xl rounded-tr-none bg-primary text-on-primary font-body-md text-body-md shadow-md">
+<p class="font-code-sm text-code-sm">/msg @dana_sec Checksum verified: <span class="bg-on-primary-container text-primary-fixed px-1 rounded">0x9F4B2C81</span>. Ready for traffic burst.</p>
+</div>
+<span class="font-code-sm text-[10px] text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">done_all</span> ACK received (0.4ms)
+          </span>
+</div>
+<!-- Broadcast Telemetry with Structured Code Block -->
+<div class="flex flex-col gap-1 max-w-[95%]">
+<div class="flex items-center gap-space-xs">
+<div class="w-5 h-5 rounded bg-tertiary/20 text-tertiary flex items-center justify-center font-code-sm text-[10px] font-bold">ED</div>
+<span class="font-code-sm text-code-sm font-bold text-tertiary">@elena_db</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-outline font-label-caps text-[9px]">STREAM MONITOR</span>
+<span class="font-code-sm text-[10px] text-outline">14:23:02</span>
+</div>
+<div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm">
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-1">State snapshot captured across 1,024 TCP worker threads:</p>
+<div class="bg-surface-container-lowest p-space-sm rounded font-code-sm text-code-sm text-primary overflow-x-auto">
+<span class="text-outline">// epoll_wait cycle #82910</span><br>
+              { "active_descriptors": 14, "backpressure_ratio": 0.012, "syn_backlog": 0, "drop_rate_ppm": 0.00 }
+            </div>
+</div>
+</div>
+<div class="flex flex-col gap-1 max-w-[92%] self-start msg-item-public"><div class="flex items-center gap-space-xs"><span class="px-1.5 py-0.2 rounded bg-primary/20 text-primary font-label-caps text-[9px] flex items-center gap-1"><span class="material-symbols-outlined text-[11px]">public</span>PUBLIC BROADCAST (SERVER -&gt; ALL CLIENTS via broadcast_lock)</span><span class="font-code-sm text-[10px] text-tertiary font-mono">Thread-1 [Worker fd:12]</span><span class="font-code-sm text-[10px] text-outline">14:23:18</span></div><div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm border border-primary/20"><p class="font-code-sm text-code-sm text-primary-fixed">/broadcast Hello TCP cluster! Python socket accept loop initialized on <code>0.0.0.0:8080</code>.</p><div class="mt-1 text-[11px] text-on-surface-variant font-mono">Iterating: <code>for client_conn in clients_list: client_conn.sendall(encoded_packet)</code></div></div></div><div class="flex flex-col gap-1 max-w-[92%] self-end items-end msg-item-private"><div class="flex items-center gap-space-xs"><span class="font-code-sm text-[10px] text-outline">14:23:45</span><span class="font-code-sm text-[10px] text-secondary font-mono">Thread-3 [YOU fd:19] -&gt; Thread-7 [TARGET fd:21]</span><span class="px-1.5 py-0.2 rounded bg-secondary-container/40 text-secondary font-label-caps text-[9px] flex items-center gap-0.5"><span class="material-symbols-outlined text-[11px]">lock</span>DIRECT PRIVATE WHISPER (clients['dana_sec'].send())</span></div><div class="p-space-sm rounded-xl rounded-tr-none bg-secondary-container text-on-secondary-container font-body-md text-body-md shadow-md"><p class="font-code-sm text-code-sm">/msg @dana_sec Payload synchronized. Worker thread queue dispatched through isolated client socket.</p></div><span class="font-code-sm text-[10px] text-secondary flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">shield</span> Thread-isolated buffer transmission complete (0.28ms)</span></div><div class="w-full p-2.5 rounded bg-surface-container-low border border-primary/30 flex items-start gap-space-xs shadow-sm"><span class="material-symbols-outlined text-primary text-[18px] mt-0.5 animate-pulse">wifi_tethering</span><div class="flex-1 min-w-0"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-primary uppercase font-bold">[TCP_HANDSHAKE_RECEIVED] 3-WAY SYN / SYN-ACK / ACK</span><span class="font-code-sm text-[10px] text-outline">14:24:02.110</span></div><p class="font-code-sm text-code-sm text-on-surface mt-0.5">Inbound socket connection from <code class="text-primary-fixed font-mono">192.168.1.58:49822</code> accepted. Allocated file descriptor <span class="text-tertiary font-bold">fd:25</span>. SYN/ACK handshake round-trip latency: <span class="text-tertiary">0.7ms</span>.</p></div></div><div class="w-full p-2 rounded bg-surface-container text-on-surface font-code-sm text-code-sm flex items-center justify-between shadow-sm border border-outline-variant"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[15px] text-tertiary">account_tree</span><span><span class="font-label-caps text-[10px] text-outline uppercase font-bold">[THREAD_SPAWN]</span> Server initialized worker <code class="text-tertiary font-mono">Thread-5(target=handle_client, args=(conn, ('192.168.1.58', 49822)))</code></span></div><span class="font-code-sm text-[10px] text-outline">14:24:02.124</span></div><div class="w-full p-2 rounded bg-surface-container-high text-on-surface font-code-sm text-code-sm flex flex-col gap-1 shadow-sm border border-secondary/20"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-secondary">lock_clock</span><span class="font-label-caps text-[10px] text-secondary font-bold uppercase">[NICK_REGISTRATION] with nicknames_lock</span></div><span class="font-code-sm text-[10px] text-outline">14:24:02.340</span></div><p class="text-[12px] text-on-surface-variant font-mono">[RECV fd:25] Command packet: <code class="text-primary font-bold">/nick frank_ops</code><br><span class="text-tertiary">»</span> Thread acquired mutex <code class="text-tertiary">nicknames_lock</code>: Nickname <span class="text-secondary font-bold">@frank_ops</span> verified available and registered to <code class="text-primary">fd:25</code>. Mutex released cleanly (status: <span class="text-tertiary font-bold">200 NICK_OK</span>).</p></div><div class="flex flex-col gap-1 max-w-[95%] self-start msg-item-public"><div class="flex items-center gap-space-xs"><span class="px-1.5 py-0.2 rounded bg-tertiary/20 text-tertiary font-label-caps text-[9px] flex items-center gap-1 font-bold"><span class="material-symbols-outlined text-[11px]">celebration</span>CLUSTER BROADCAST</span><span class="font-code-sm text-[10px] text-tertiary font-mono">Server [broadcast_lock]</span><span class="font-code-sm text-[10px] text-outline">14:24:02.401</span></div><div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm border border-tertiary/30"><p class="font-code-sm text-code-sm text-tertiary">👋 System Broadcast: Client <strong class="text-primary-fixed">@frank_ops</strong> joined the TCP cluster from <code>192.168.1.58:49822</code>. Active socket peers: <strong class="text-tertiary">15</strong>.</p></div></div><div class="flex flex-col gap-1 max-w-[90%] self-start msg-item-public"><div class="flex items-center gap-space-xs"><div class="w-5 h-5 rounded bg-primary/20 text-primary flex items-center justify-center font-code-sm text-[10px] font-bold">FO</div><span class="font-code-sm text-code-sm font-bold text-primary">@frank_ops</span><span class="px-1 py-0.2 rounded bg-tertiary/10 text-tertiary font-label-caps text-[9px]">FIRST FRAME</span><span class="font-code-sm text-[10px] text-outline">14:24:03</span></div><div class="p-space-sm rounded-xl rounded-tl-none bg-surface-container text-on-surface font-body-md text-body-md shadow-sm"><p class="font-code-sm text-code-sm">Hello cluster! Connected via Python socket AF_INET/SOCK_STREAM. Ready to consume packet streams.</p></div></div></div>
+<!-- RAW PACKET STREAM CONTAINER (Hidden by default, switched via tab) -->
+<div class="hidden flex-1 bg-surface-container-lowest rounded-xl p-space-md overflow-y-auto max-h-[640px] font-code-sm text-code-sm flex-col gap-1 shadow-inner min-h-[460px]" id="rawPacketFeed">
+<div class="text-outline pb-1 font-label-caps text-label-caps">HEX DUMP INTERCEPTOR [SOCKET_RAW_CAPTURE]</div>
+<div class="text-tertiary hover:bg-surface-container-high p-1 rounded transition-colors font-mono">
+<span class="text-outline">14:22:04.102</span> [TCP RECV] 45 00 00 3c 1a 2b 40 00 40 06 c8 11 c0 a8 01 2a | E..&lt;.+@.@......*
+        </div>
+<div class="text-primary hover:bg-surface-container-high p-1 rounded transition-colors font-mono">
+<span class="text-outline">14:22:04.103</span> [TCP PUSH] 06 b6 d4 1f 9b 12 a0 04 e2 1a 0f 90 80 18 01 f5 | ................
+        </div>
+<div class="text-secondary hover:bg-surface-container-high p-1 rounded transition-colors font-mono">
+<span class="text-outline">14:22:19.418</span> [TLS_RECORD] 17 03 03 00 48 31 8d e4 b1 02 a9 4b c7 21 00 ff | ....H1.....K.!..
+        </div>
+<div class="text-tertiary hover:bg-surface-container-high p-1 rounded transition-colors font-mono">
+<span class="text-outline">14:22:31.002</span> [TCP ACK ] 50 10 01 f5 3c 9a 00 00 43 68 65 63 6b 73 75 6d | P...&lt;...Checksum
+        </div>
+<div class="text-on-surface hover:bg-surface-container-high p-1 rounded transition-colors font-mono">
+<span class="text-outline">14:23:02.891</span> [STREAM_IO] 7b 22 61 63 74 69 76 65 5f 64 65 73 63 72 69 70 | {"active_descrip
+        </div>
+</div>
+<!-- Command Quick Action Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<span class="font-label-caps text-[9px] text-outline uppercase tracking-wider shrink-0">Snippets:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-code-sm text-code-sm shrink-0 transition-colors" onclick="insertCommand('/msg @alice_core ')">/msg whisper</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm shrink-0 transition-colors" onclick="insertCommand('/broadcast ')">/broadcast all</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm shrink-0 transition-colors" onclick="insertCommand('/nick ')">/nick name</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-tertiary font-code-sm text-code-sm shrink-0 transition-colors" onclick="sendPingCommand()">/ping server</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm shrink-0 transition-colors" onclick="insertCommand('/stats socket --verbose')">/dump-stats</button>
+</div>
+<!-- Message Terminal Input -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-md flex flex-col gap-space-xs">
+<form class="flex items-center gap-space-sm" id="chatForm" onsubmit="event.preventDefault(); handleSend();">
+<div class="flex items-center pl-space-sm font-code-sm text-primary select-none font-bold">
+<span>&gt;</span>
+</div>
+<input autocomplete="off" class="flex-1 bg-transparent text-on-surface font-code-md text-code-md placeholder-outline focus:outline-none" id="messageInput" placeholder="Type message or TCP command (e.g., /msg @user &lt;text&gt;, /broadcast &lt;text&gt;, /nick &lt;name&gt;)..." type="text">
+<div class="flex items-center gap-1.5 pr-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Buffer Ready / Pipeline Clear">bolt</span>
+<button class="px-space-md py-1.5 rounded bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-md text-body-sm font-semibold transition-all flex items-center gap-1" type="submit">
+<span>Send</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</form>
+<div class="flex items-center justify-between px-space-xs pt-1 text-[11px] font-code-sm text-outline">
+<div class="flex items-center gap-2">
+<span>Encoding: <strong class="text-on-surface">UTF-8 String Buffer</strong></span>
+<span>•</span>
+<span>Framing: <strong class="text-on-surface">CRLF Delimited</strong></span>
+</div>
+<span class="hidden sm:inline">Press <kbd class="px-1 rounded bg-surface-container text-on-surface">Enter</kbd> to transmit packet</span>
+</div>
+</div>
+</main>
+<!-- RIGHT COLUMN: Socket Telemetry & Packet Inspector (Width approx 340px / 3 cols) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md min-w-0">
+<!-- Panel 1: Live Packet Inspector -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs shadow-md border border-primary/20"><div class="flex items-center justify-between"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-[18px]">memory</span><span class="font-headline-md text-body-md font-bold text-on-surface">Python Thread Inspector</span></div><span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-caps text-label-caps">15 ONLINE</span></div><p class="font-code-sm text-[11px] text-on-surface-variant">Concurrency Model: <code class="text-primary">threading.Thread</code> per incoming connection loop.</p><div class="flex flex-col gap-1 mt-1 font-mono text-[11px]"><div class="p-1.5 rounded bg-surface-container flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="text-on-surface font-semibold">Thread-1</span><span class="text-outline">(@alice_core)</span></div><span class="text-primary font-bold">fd:12 [recv(1024)]</span></div><div class="p-1.5 rounded bg-surface-container flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="text-on-surface font-semibold">Thread-2</span><span class="text-outline">(@bob_infra)</span></div><span class="text-primary font-bold">fd:15 [recv(1024)]</span></div><div class="p-1.5 rounded bg-surface-container-high border border-primary/30 flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="text-primary font-semibold">Thread-3</span><span class="text-primary-fixed">(@dev_alex [YOU])</span></div><span class="text-tertiary font-bold">fd:19 [ACTIVE]</span></div><div class="p-1.5 rounded bg-surface-container flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="text-on-surface font-semibold">Thread-4</span><span class="text-outline">(@dana_sec)</span></div><span class="text-secondary font-bold">fd:21 [LOCK_ACQ]</span></div><div class="p-1.5 rounded bg-surface-container-high border border-tertiary/40 flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-tertiary font-semibold">Thread-5</span><span class="text-primary-fixed">(@frank_ops)</span></div><span class="text-tertiary font-bold">fd:25 [recv(1024)]</span></div></div><div class="p-2 rounded bg-surface-container-lowest mt-1 text-[11px] font-mono text-outline flex flex-col gap-0.5"><div class="flex justify-between"><span class="text-outline">TCP Handshake:</span><span class="text-tertiary font-bold">SYN -&gt; SYN-ACK -&gt; ACK</span></div><div class="flex justify-between"><span class="text-outline">Nick Lock State:</span><span class="text-on-surface">UNLOCKED (0 queued)</span></div><div class="p-1.5 rounded bg-surface-container-high border border-tertiary/40 flex items-center justify-between"><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="text-tertiary font-semibold">Thread-5</span><span class="text-primary-fixed">(@frank_ops)</span></div><span class="text-tertiary font-bold">fd:25 [recv(1024)]</span></div></div></div><div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">search_check</span>
+<span class="font-headline-md text-body-md font-bold text-on-surface">Packet Inspector</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps">LAST FRAME</span>
+</div>
+<!-- TCP Header Grid -->
+<div class="grid grid-cols-2 gap-1.5 mt-space-xs">
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-[9px] text-outline uppercase">Source Port</span>
+<span class="font-code-md text-code-md font-bold text-primary tabular-nums">52190</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-[9px] text-outline uppercase">Dest Port</span>
+<span class="font-code-md text-code-md font-bold text-on-surface tabular-nums">8080 (TCP)</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-[9px] text-outline uppercase">Seq Number</span>
+<span class="font-code-sm text-[11px] text-on-surface font-mono tabular-nums">3891402851</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<span class="font-label-caps text-[9px] text-outline uppercase">Ack Number</span>
+<span class="font-code-sm text-[11px] text-on-surface font-mono tabular-nums">1904128490</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container flex items-center justify-between mt-1">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-outline uppercase">Flags Activated</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1 rounded bg-tertiary/20 text-tertiary font-label-caps text-[9px] font-bold">PSH</span>
+<span class="px-1 rounded bg-primary/20 text-primary font-label-caps text-[9px] font-bold">ACK</span>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-caps text-[9px]">SYN:0</span>
+<span class="px-1 rounded bg-surface-container-highest text-outline font-label-caps text-[9px]">FIN:0</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-[9px] text-outline uppercase block">Win Size</span>
+<span class="font-code-md text-code-md font-bold text-on-surface tabular-nums">65535</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container flex items-center justify-between">
+<span class="font-label-caps text-[9px] text-outline uppercase">Checksum Status</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            0x4B2C [VALID]
+          </span>
+</div>
+</div>
+<!-- Panel 2: Real-time Socket Health Gauges -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-body-md font-bold text-on-surface">Buffer &amp; Latency</span>
+<span class="material-symbols-outlined text-outline text-[18px]">speed</span>
+</div>
+<!-- Buffer Utilization Meter -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Socket Ring Buffer</span>
+<span class="text-primary font-bold tabular-nums">12% / 256 KB</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 12%"></div>
+</div>
+</div>
+<!-- RTT Sparkline Graph (Inline SVG) -->
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Round-Trip Fluctuations</span>
+<span class="text-tertiary font-bold tabular-nums">avg 1.14 ms</span>
+</div>
+<div class="w-full h-12 bg-surface-container-lowest rounded p-1 flex items-end">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 30">
+<path class="text-primary" d="M 0,20 Q 15,25 25,12 T 50,15 T 75,8 T 100,14" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-primary/10" d="M 0,20 Q 15,25 25,12 T 50,15 T 75,8 T 100,14 L 100,30 L 0,30 Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+<!-- TX / RX Counter Tiles -->
+<div class="grid grid-cols-2 gap-1.5 pt-1">
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span class="font-label-caps text-[9px] uppercase">TX Bytes</span>
+</div>
+<span class="font-code-md text-code-md font-bold text-on-surface tabular-nums mt-0.5" id="txCounter">142.8 KB</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+<span class="font-label-caps text-[9px] uppercase">RX Bytes</span>
+</div>
+<span class="font-code-md text-code-md font-bold text-on-surface tabular-nums mt-0.5" id="rxCounter">894.2 KB</span>
+</div>
+</div>
+</div>
+<!-- Panel 3: Socket Server Event Log Terminal -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs shadow-md flex-1 min-h-[190px]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">history</span>
+<span class="font-headline-md text-body-md font-bold text-on-surface">Event Log</span>
+</div>
+<span class="font-label-caps text-[9px] text-tertiary animate-pulse">STREAMING</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded p-2 overflow-y-auto max-h-[170px] font-code-sm text-[11px] flex flex-col gap-1 text-on-surface-variant font-mono" id="serverEventLog"><div><span class="text-outline">14:24:03</span> <span class="text-outline">BCAST</span> :: Announce @frank_ops to 15 sockets</div><div><span class="text-outline">14:24:02</span> <span class="text-secondary">NICK</span> :: fd:25 set nickname @frank_ops</div><div><span class="text-outline">14:24:02</span> <span class="text-primary">THREAD</span> :: Thread-5 spawned for fd:25</div><div><span class="text-outline">14:24:02</span> <span class="text-tertiary">ACCEPT</span> :: fd:25 peer 192.168.1.58:49822</div>
+<div><span class="text-outline">14:20:10</span> <span class="text-primary">INFO</span> :: Bind on 0.0.0.0:8080 success</div>
+<div><span class="text-outline">14:20:15</span> <span class="text-tertiary">ACCEPT</span> :: fd:12 peer 127.0.0.1:49201</div>
+<div><span class="text-outline">14:21:40</span> <span class="text-tertiary">ACCEPT</span> :: fd:19 authenticated as @dev_alex</div>
+<div><span class="text-outline">14:22:04</span> <span class="text-outline">BCAST</span> :: 124B distributed to 14 fds</div>
+<div><span class="text-outline">14:22:19</span> <span class="text-secondary">PIPE</span> :: Direct fd:21 -&gt; fd:19 framed</div>
+</div>
+</div>
+</aside>
+</section>
+<!-- Nick Switch Modal (Self-contained) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md hidden items-center justify-center z-50 p-space-md" id="nickModal">
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-xl max-w-sm w-full flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Update Socket Handle</span>
+<button class="text-outline hover:text-on-surface material-symbols-outlined" onclick="toggleNickModal(false)">close</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Sends a <code class="text-primary font-bold font-mono">/nick &lt;handle&gt;</code> packet over your TCP connection (<code>fd:19</code>). The server acquires <code class="text-tertiary font-mono">with nicknames_lock:</code> to guarantee unique handles across concurrent client threads before acknowledging back with <code class="text-secondary font-mono">200 NICK_OK</code>.</p>
+<input class="bg-surface-container-lowest px-space-md py-2 rounded text-on-surface font-code-md text-code-md focus:outline-none" id="modalNickInput" type="text" value="dev_alex">
+<div class="flex justify-end gap-space-sm">
+<button class="px-space-md py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-code-sm text-code-sm" onclick="toggleNickModal(false)">Cancel</button>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-headline-md text-body-sm font-semibold" onclick="applyNewNick()">Update Handle</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let activeNick = 'dev_alex';
+  let txBytes = 142800;
+  let rxBytes = 894200;
+
+  // View Tab Switcher (Visual vs Raw Packet)
+  const tabVisual = document.getElementById('tabVisual');
+  const tabPacket = document.getElementById('tabPacket');
+  const visualFeed = document.getElementById('visualFeed');
+  const rawPacketFeed = document.getElementById('rawPacketFeed');
+
+  tabVisual.addEventListener('click', () => {
+    tabVisual.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+    tabVisual.classList.remove('text-on-surface-variant');
+    tabPacket.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+    tabPacket.classList.add('text-on-surface-variant');
+    visualFeed.classList.remove('hidden');
+    rawPacketFeed.classList.add('hidden');
+  });
+
+  tabPacket.addEventListener('click', () => {
+    tabPacket.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+    tabPacket.classList.remove('text-on-surface-variant');
+    tabVisual.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold', 'shadow-sm');
+    tabVisual.classList.add('text-on-surface-variant');
+    visualFeed.classList.add('hidden');
+    rawPacketFeed.classList.remove('hidden');
+  });
+
+  // Channel switching
+  document.querySelectorAll('.channel-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('.channel-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-high', 'text-primary');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-high', 'text-primary');
+      btn.classList.remove('text-on-surface-variant');
+      const channel = btn.getAttribute('data-channel');
+      appendSystemLog(`Switched room descriptor to #${channel}`);
+    });
+  });
+
+  // Nick modal handling
+  const identityChip = document.getElementById('identityChip');
+  const nickModal = document.getElementById('nickModal');
+  const modalNickInput = document.getElementById('modalNickInput');
+  const currentNickLabel = document.getElementById('currentNickLabel');
+
+  function toggleNickModal(show) {
+    if (show) {
+      modalNickInput.value = activeNick;
+      nickModal.classList.remove('hidden');
+      nickModal.classList.add('flex');
+      modalNickInput.focus();
+    } else {
+      nickModal.classList.add('hidden');
+      nickModal.classList.remove('flex');
+    }
+  }
+
+  identityChip.addEventListener('click', () => toggleNickModal(true));
+
+  function applyNewNick() {
+    const val = modalNickInput.value.trim().replace(/^@/, '');
+    if (val) {
+      activeNick = val;
+      currentNickLabel.innerText = '@' + activeNick;
+      appendSystemLog(`NICK command registered: @${activeNick}`);
+      appendConsoleMessage(`[SYSTEM] Client handle changed to @${activeNick} across socket cluster.`, 'system');
+    }
+    toggleNickModal(false);
+  }
+
+  function insertCommand(cmd) {
+    const input = document.getElementById('messageInput');
+    input.value = cmd;
+    input.focus();
+  }
+
+  function quickWhisper(user) {
+    insertCommand(`/msg @${user} `);
+  }
+
+  function prefillWhisper(user) {
+    insertCommand(`/msg ${user} `);
+  }
+
+  function selectPeerWhisper(user) {
+    insertCommand(`/msg @${user} `);
+    appendSystemLog(`Direct crypto tunnel established with @${user}`);
+  }
+
+  function sendPingCommand() {
+    insertCommand('/ping');
+    handleSend();
+  }
+
+  function handleSend() {
+    const input = document.getElementById('messageInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    const timeStr = new Date().toTimeString().split(' ')[0];
+
+    // Evaluate message or command
+    if (text.startsWith('/nick ')) {
+      const parts = text.split(' ');
+      if (parts[1]) {
+        activeNick = parts[1].replace('@', '');
+        currentNickLabel.innerText = '@' + activeNick;
+        appendSystemLog(`Handle changed via CLI to @${activeNick}`);
+        appendConsoleMessage(`[COMMAND] Nick updated to @${activeNick}`, 'system');
+      }
+    } else if (text.startsWith('/ping')) {
+      const latency = (Math.random() * 0.8 + 0.4).toFixed(2);
+      appendConsoleOutgoing(text, timeStr);
+      setTimeout(() => {
+        appendConsoleMessage(`[PONG] Socket response from 127.0.0.1:8080 in ${latency}ms [TLS verified]`, 'system');
+      }, 150);
+    } else if (text.startsWith('/msg ')) {
+      appendConsoleOutgoing(text, timeStr, true);
+    } else {
+      appendConsoleOutgoing(text, timeStr, false);
+    }
+
+    // Telemetry updates
+    txBytes += text.length + 32;
+    document.getElementById('txCounter').innerText = (txBytes / 1024).toFixed(1) + ' KB';
+    
+    // Add raw HEX capture simulation
+    appendRawCapture(text);
+
+    input.value = '';
+    visualFeed.scrollTop = visualFeed.scrollHeight;
+  }
+
+  function appendConsoleOutgoing(msg, time, isWhisper = false) {
+    const bubble = document.createElement('div');
+    bubble.className = "flex flex-col gap-1 max-w-[88%] self-end items-end animate-fadeIn";
+    bubble.innerHTML = `
+      <div class="flex items-center gap-space-xs">
+        <span class="font-code-sm text-[10px] text-outline">${time}</span>
+        <span class="px-1 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-caps text-[9px]">${isWhisper ? 'WHISPER' : 'BROADCAST'}</span>
+        <span class="font-code-sm text-code-sm font-bold text-primary">@${activeNick}</span>
+        <div class="w-5 h-5 rounded bg-primary text-on-primary flex items-center justify-center font-code-sm text-[10px] font-bold">${activeNick.charAt(0).toUpperCase()}</div>
+      </div>
+      <div class="p-space-sm rounded-xl rounded-tr-none ${isWhisper ? 'bg-secondary-container text-on-secondary-container' : 'bg-primary text-on-primary'} font-body-md text-body-md shadow-md">
+        <p class="font-code-sm text-code-sm">${escapeHtml(msg)}</p>
+      </div>
+      <span class="font-code-sm text-[10px] text-tertiary flex items-center gap-0.5">
+        <span class="material-symbols-outlined text-[12px]">done_all</span> ACK (0.3ms)
+      </span>
+    `;
+    visualFeed.appendChild(bubble);
+  }
+
+  function appendConsoleMessage(msg, type = 'normal') {
+    const item = document.createElement('div');
+    item.className = "w-full p-2 rounded bg-surface-container text-on-surface font-code-sm text-code-sm shadow-sm";
+    item.innerHTML = `<span class="text-tertiary">&gt;&gt;</span> ${escapeHtml(msg)}`;
+    visualFeed.appendChild(item);
+    visualFeed.scrollTop = visualFeed.scrollHeight;
+  }
+
+  function appendSystemLog(logText) {
+    const time = new Date().toTimeString().split(' ')[0];
+    const logContainer = document.getElementById('serverEventLog');
+    const entry = document.createElement('div');
+    entry.innerHTML = `<span class="text-outline">${time}</span> <span class="text-tertiary">EVENT</span> :: ${escapeHtml(logText)}`;
+    logContainer.prepend(entry);
+  }
+
+  function appendRawCapture(str) {
+    const rawContainer = document.getElementById('rawPacketFeed');
+    const time = new Date().toTimeString().split(' ')[0] + '.' + Math.floor(Math.random()*900 + 100);
+    const hexSlice = Array.from(str.slice(0, 16)).map(c => c.charCodeAt(0).toString(16).padStart(2, '0')).join(' ');
+    const entry = document.createElement('div');
+    entry.className = "text-primary hover:bg-surface-container-high p-1 rounded transition-colors font-mono";
+    entry.innerHTML = `<span class="text-outline">${time}</span> [STREAM_OUT] ${hexSlice} | ${escapeHtml(str.slice(0, 16))}`;
+    rawContainer.appendChild(entry);
+    rawContainer.scrollTop = rawContainer.scrollHeight;
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  // Quick Action Buttons
+  document.getElementById('btnClearBuffer').addEventListener('click', () => {
+    visualFeed.innerHTML = '';
+    rawPacketFeed.innerHTML = '';
+    appendSystemLog('Console and raw packet buffers cleared');
+  });
+
+  document.getElementById('btnSpawnMock').addEventListener('click', () => {
+    const mockId = Math.floor(Math.random() * 80 + 10);
+    const mockHandle = 'mock_node_' + mockId;
+    appendSystemLog(`Spawned synthetic client @${mockHandle} (fd:${mockId + 10})`);
+    
+    // Add to peer list
+    const peerList = document.getElementById('peerListContainer');
+    const newPeer = document.createElement('div');
+    newPeer.className = 'peer-item p-1.5 rounded hover:bg-surface-container transition-all cursor-pointer flex items-center justify-between';
+    newPeer.onclick = () => quickWhisper(mockHandle);
+    newPeer.innerHTML = `
+      <div class="flex items-center gap-2 min-w-0">
+        <div class="relative">
+          <div class="w-6 h-6 rounded bg-surface-container-highest text-tertiary flex items-center justify-center font-code-sm text-code-sm font-bold">MK</div>
+          <span class="w-2 h-2 rounded-full bg-tertiary absolute -bottom-0.5 -right-0.5"></span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-code-sm text-code-sm text-on-surface truncate">@${mockHandle}</span>
+          <span class="font-label-caps text-[9px] text-outline">VIRTUAL • fd:${mockId + 10}</span>
+        </div>
+      </div>
+      <span class="font-code-sm text-[11px] text-tertiary">0.5ms</span>
+    `;
+    peerList.prepend(newPeer);
+    appendConsoleMessage(`[MOCK_CLIENT] @${mockHandle} attached to broadcast stream on socket fd:${mockId + 10}`, 'system');
+  });
+
+  document.getElementById('btnExportLogs').addEventListener('click', () => {
+    appendSystemLog('Dumped active session frame buffer to telemetry-session.json');
+    alert('Session telemetry exported (JSON frame format).');
+  });
+
+  document.getElementById('btnReconnect').addEventListener('click', () => {
+    appendSystemLog('Triggering TCP zero-downtime socket re-handshake...');
+    setTimeout(() => {
+      appendSystemLog('Socket fd:19 re-authenticated (TLS 1.3 resumption ticket OK)');
+    }, 400);
+  });
+
+  // Client Search Filter
+  document.getElementById('peerSearchInput').addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    document.querySelectorAll('.peer-item').forEach(el => {
+      const text = el.innerText.toLowerCase();
+      el.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest mt-auto"><div class="w-full px-gutter-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-code-sm text-code-sm text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span>SPEC: RFC 793 COMPLIANT</span><span>•</span><span>TLS 1.3 WRAPPER</span><span>•</span><span class="text-tertiary">p99 LATENCY &lt; 0.42ms</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="text-on-surface">SYSTEM NOMINAL</span></div><span class="font-body-sm text-body-sm text-outline">© 2025 PulseTCP Telemetry Engine</span></div></div></footer>
+
+</body></html>

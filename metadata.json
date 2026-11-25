@@ -1,0 +1,6 @@
+{
+  "name": "PulseTCP",
+  "description": "Low-latency multi-client TCP chat and real-time socket telemetry platform powered by Python sockets and multithreading.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
